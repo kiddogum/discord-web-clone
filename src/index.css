@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply relative m-0 p-0  w-full;
+  }
+  a {
+    @apply hover:underline underline-offset-2;
+  }
+}
+
+@layer components {
+  .button-sm {
+    @apply px-4 py-2 bg-white text-xs whitespace-nowrap font-bold rounded-full sm:text-base;
+  }
+  .button-md {
+    @apply px-4 py-4 text-center items-center whitespace-nowrap font-semibold text-base rounded-full sm:px-10 sm:py-4 sm:text-lg;
+  }
+  .title {
+    @apply text-white font-trial font-black text-4xl text-center lg:text-6xl xl:text-7xl;
+  }
+  .desc {
+    @apply text-white font-light text-base text-center sm:text-lg md:font-normal xl:text-xl;
+  }
+  .feature-container {
+    @apply p-2 bg-feature-linear backdrop-blur-sm border-2 border-white rounded-3xl;
+  }
+  .feature-image-container {
+    @apply m-2 p-8 aspect-[1.2/1] flex items-center rounded-3xl;
+  }
+  .color1 {
+    @apply bg-gradient-to-b from-blue-500 to-blue-700;
+  }
+  .color2 {
+    @apply bg-pink-300;
+  }
+  .color3 {
+    @apply bg-gradient-to-tr from-blue-400 to-blue-700;
+  }
+  .color4 {
+    @apply bg-gradient-to-r from-pink-300 to-pink-500;
+  }
+  .color5 {
+    @apply bg-feature-radial;
+  }
+  .color6 {
+    @apply bg-gradient-to-tr from-blue-300 to-blue-500;
+  }
+  .marquee-text {
+    @apply text-white font-black font-trial text-4xl bg-gradient-to-br from-pink-500 to-violet-600 bg-clip-text hover:text-transparent;
+  }
+  .bg-light {
+    @apply absolute rounded-full;
+  }
+}
+.bg-stars::after {
+  content: "";
+  position: absolute;
+  z-index: inherit;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(2px);
+}
+
+.bg-light:nth-child(1) {
+  background: radial-gradient(#261b90, transparent 70%);
+}
+.bg-light:nth-child(2) {
+  background: radial-gradient(#18396d, transparent 70%);
+}
+.bg-light:nth-child(3) {
+  background: radial-gradient(#7e1cba, transparent 50%);
+}
+.bg-light:nth-child(4) {
+  background: radial-gradient(#6a0f53, transparent 50%);
+}
