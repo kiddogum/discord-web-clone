@@ -8,6 +8,8 @@ export default {
         "dark-blue": "#161cbb",
         "light-blue": "#5865f2",
         purple: "#5865F2",
+        grey: "#f6f6f6",
+        "light-black": "#23272a",
       },
       fontFamily: {
         trial: "Kanit, sans-serif",

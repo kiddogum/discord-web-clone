@@ -8,14 +8,18 @@ import featureSix from "../assets/feature-6.svg";
 import { GoDownload } from "react-icons/go";
 import Feature from "../components/Feature";
 import Marquee from "../components/Marquee";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
+  const handleAlertDownload = () => {
+    alert(`downloading discord!`);
+  };
   return (
     <div className="relative overflow-x-hidden overflow-y-hidden bg-stars bg-center bg-repeat">
-      <div className="bg-light top-[0%] left-[-20%] size-[120rem]"></div>
-      <div className="bg-light top-[20%] left-[10%] size-[130rem]"></div>
-      <div className="bg-light top-[60%] left-[25%] size-[120rem] lg:top-[65%]"></div>
-      <div className="bg-light top-[65%] left-[-40%] size-[120rem] lg:top-[70%]"></div>
+      <div className="bg-light top-[0%] left-[-80%] size-[120rem] lg:left-[-20%]"></div>
+      <div className="bg-light top-[20%] left-[-40%] size-[130rem] lg:left-[10%]"></div>
+      <div className="bg-light left-[-40%] size-[120rem] top-[70%] lg:left-[25%]"></div>
+      <div className="bg-light left-[-80%] size-[120rem] top-[80%] lg:left-[-60%]"></div>
       <div className="relative z-10">
         <section className="mx-10 py-28 sm:py-36">
           <div className="mx-2 sm:mx-8 lg:mx-16 xl:flex item-center xl:my-16">
@@ -31,12 +35,20 @@ const HomePage = () => {
             </div>
           </div>
           <div className="sm:mx-12 mx-0 justify-center flex flex-col gap-6 lg:flex-row">
-            <button className=" button-md bg-white flex gap-2 justify-center text-black hover:text-light-blue hover:shadow-xl">
+            <button
+              className=" button-md bg-white flex gap-2 justify-center text-black hover:text-light-blue hover:shadow-xl"
+              onClick={handleAlertDownload}
+            >
               <GoDownload className="text-2xl" />
               <p>Download for Windows</p>
             </button>
             <button className=" button-md bg-dark-blue text-white hover:shadow-xl">
-              <p>Open Discord in Your Browser</p>
+              <Link
+                to="https://discord.com/channels/@me"
+                className="hover:no-underline"
+              >
+                Open Discord in Your Browser
+              </Link>
             </button>
           </div>
         </section>
@@ -90,7 +102,10 @@ const HomePage = () => {
 
         <section className="mt-36 mx-10 xl:mx-52">
           <h1 className="title">YOU CAN'T SCROLL ANYMORE. BETTER GO CHAT.</h1>
-          <button className=" button-md mt-8 mx-auto bg-light-blue flex gap-2 justify-center text-white hover:shaodw-xl">
+          <button
+            className=" button-md mt-8 mx-auto bg-light-blue flex gap-2 justify-center text-white hover:shaodw-xl"
+            onClick={handleAlertDownload}
+          >
             <GoDownload className="text-2xl" />
             <p>Download for Windows</p>
           </button>

@@ -15,11 +15,17 @@ const Footer = () => {
           <select
             name="language"
             id="language"
-            className=" cursor-pointer my-8 bg-transparent text-white border-none"
+            className="cursor-pointer my-8 py-2 pl-2 pr-4 bg-transparent text-white border-none"
           >
-            <option value="english">English</option>
-            <option value="indonesia">Indonesia</option>
-            <option value="french">French</option>
+            <option value="english" className="text-black">
+              English
+            </option>
+            <option value="indonesia" className="text-black">
+              Indonesia
+            </option>
+            <option value="french" className="text-black">
+              French
+            </option>
           </select>
 
           <div className="flex gap-6 my-8">

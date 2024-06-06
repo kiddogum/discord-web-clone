@@ -15,10 +15,10 @@
 
 @layer components {
   .button-sm {
-    @apply px-4 py-2 bg-white text-xs whitespace-nowrap font-bold rounded-full sm:text-base;
+    @apply px-4 py-2 bg-white text-xs whitespace-nowrap font-bold rounded-full cursor-pointer sm:text-base;
   }
   .button-md {
-    @apply px-4 py-4 text-center items-center whitespace-nowrap font-semibold text-base rounded-full sm:px-10 sm:py-4 sm:text-lg;
+    @apply px-4 py-4 text-center items-center whitespace-nowrap font-semibold text-base rounded-full cursor-pointer sm:px-10 sm:py-4 sm:text-lg;
   }
   .title {
     @apply text-white font-trial font-black text-4xl text-center lg:text-6xl xl:text-7xl;
@@ -79,4 +79,8 @@
 }
 .bg-light:nth-child(4) {
   background: radial-gradient(#6a0f53, transparent 50%);
+}
+
+.grid-child:nth-child(2) {
+  grid-area: 2/2/3/3;
 }
