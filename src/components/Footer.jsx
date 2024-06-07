@@ -7,9 +7,11 @@ import {
   FaDiscord,
 } from "react-icons/fa6";
 
-const Footer = () => {
+const Footer = ({ footerBg }) => {
   return (
-    <section className=" p-8 m-0 bg-gradient-to-br from-violet-500 to-blue-900 border-t-neutral-300 border-t-4 lg:p-16 xl:px-32">
+    <section
+      className={`p-8 m-0 z-10 ${footerBg} border-t-neutral-300 border-t-4 lg:p-16 xl:px-32`}
+    >
       <div className="md:flex md:justify-between">
         <div className="mr-10">
           <select

@@ -6,7 +6,7 @@ import { LuDownload } from "react-icons/lu";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ navbarBg }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [background, setBackground] = useState("");
 
@@ -69,7 +69,7 @@ const Navbar = () => {
 
   window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
-      setBackground("bg-dark-blue");
+      setBackground(navbarBg);
     } else {
       setBackground("");
     }
@@ -77,6 +77,7 @@ const Navbar = () => {
 
   const handleAlertDownload = () => {
     alert("downloading discord");
+    handleExpand();
   };
 
   return (
@@ -99,7 +100,11 @@ const Navbar = () => {
         </div>
 
         <div className="hidden gap-6 place-items-center lg:flex xl:gap-12">
-          <Link className="text-lg font-semibold text-white" to="/download">
+          <Link
+            className="text-lg font-semibold text-white"
+            to="/download"
+            onClick={handleExpand}
+          >
             Download
           </Link>
           <Link className="text-lg font-semibold text-white" to="/nitro">
@@ -167,17 +172,26 @@ const Navbar = () => {
                 <Link
                   to="/download"
                   className="text-lg font-semibold text-black"
+                  onClick={handleExpand}
                 >
                   Download
                 </Link>
               </motion.div>
               <motion.div variants={NavLinkAnimation}>
-                <Link to="/nitro" className="text-lg font-semibold text-black">
+                <Link
+                  to="/nitro"
+                  className="text-lg font-semibold text-black"
+                  onClick={handleExpand}
+                >
                   Nitro
                 </Link>
               </motion.div>
               <motion.div variants={NavLinkAnimation}>
-                <Link to="/safety" className="text-lg font-semibold text-black">
+                <Link
+                  to="/safety"
+                  className="text-lg font-semibold text-black"
+                  onClick={handleExpand}
+                >
                   Safety
                 </Link>
               </motion.div>
@@ -185,12 +199,17 @@ const Navbar = () => {
                 <Link
                   to="/support"
                   className="text-lg font-semibold text-black"
+                  onClick={handleExpand}
                 >
                   Support
                 </Link>
               </motion.div>
               <motion.div variants={NavLinkAnimation}>
-                <Link to="/blog" className="text-lg font-semibold text-black">
+                <Link
+                  to="/blog"
+                  className="text-lg font-semibold text-black"
+                  onClick={handleExpand}
+                >
                   Blog
                 </Link>
               </motion.div>
@@ -198,6 +217,7 @@ const Navbar = () => {
                 <Link
                   to="/carrers"
                   className="text-lg font-semibold text-black"
+                  onClick={handleExpand}
                 >
                   Carrers
                 </Link>
