@@ -11,7 +11,7 @@ const Layout = () => {
       navbarBg = "bg-dark-blue";
       footerBg = "bg-gradient-to-br from-violet-500 to-blue-900";
       break;
-    case "/download":
+    case "/download" || "/nitro":
       navbarBg = "bg-light-blue";
       footerBg = "bg-light-black";
   }

@@ -14,6 +14,7 @@ const HomePage = () => {
   const handleAlertDownload = () => {
     alert(`downloading discord!`);
   };
+
   return (
     <div className="relative overflow-x-hidden overflow-y-hidden bg-stars bg-center bg-repeat">
       <div className="bg-light top-[0%] left-[-80%] size-[120rem] lg:left-[-20%]"></div>

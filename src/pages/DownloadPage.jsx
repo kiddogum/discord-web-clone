@@ -32,7 +32,7 @@ const DownloadPage = () => {
 
   return (
     <div className="relative bg-white overflow-x-hidden overflow-y-hidden">
-      <section className="w-full m-0 px-2 py-16 bg-neutral-800 sm:py-24 lg:h-dvh">
+      <section className="w-full m-0 px-2 py-16 bg-neutral-800 sm:py-24 lg:h-dvh xl:px-16">
         <div className="mx-2 sm:mx-8 lg:mx-12 sm:flex items-center lg:my-20 lg:gap-8">
           <div className="my-8 flex flex-col gap-4 lg:gap-6 xl:gap-8">
             <h1 className="title text-left sm:text-6xl">

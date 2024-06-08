@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-5xl font-black font-trial md:text-6xl lg:text-7xl;
+  }
+  h2 {
+    @apply text-4xl font-trial font-extrabold xl:text-5xl;
+  }
+  p {
+    @apply lg:text-lg;
+  }
+}
+
+@layer components {
+  .nitro-card {
+    @apply p-4 text-white text-left rounded-xl md:p-8 xl:p-8;
+  }
+  .nitro-card-button {
+    @apply bg-white py-2 mt-auto max-h-16 text-black font-bold text-xl rounded-full md:py-4;
+  }
+}
+
+.hero-bg {
+  background: linear-gradient(to bottom, #3b82f6, #c993ed 50%);
+}

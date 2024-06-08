@@ -9,6 +9,7 @@ import HomePage from "./pages/HomePage";
 import Layout from "./layout/Layout.jsx";
 import DownloadPage from "./pages/DownloadPage.jsx";
 import PageNotFound from "./pages/PageNotFound.jsx";
+import NitroPage from "./pages/NitroPage.jsx";
 import {} from "react";
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<HomePage />} />
         <Route path="/download" element={<DownloadPage />} />
+        <Route path="/nitro" element={<NitroPage />} />
         <Route path="*" element={<PageNotFound />} />
       </Route>
     )

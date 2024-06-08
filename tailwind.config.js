@@ -15,7 +15,7 @@ export default {
         trial: "Kanit, sans-serif",
       },
       backgroundImage: {
-        stars: 'url("./assets/stars_bg.svg")',
+        stars: 'url("./src/assets/stars_bg.svg")',
         "feature-linear":
           "linear-gradient(135deg, rgba(255,255,255, 0.4), rgba(255,255,255, 0.2))",
         "feature-radial":
